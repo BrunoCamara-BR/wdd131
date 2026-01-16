@@ -3,8 +3,7 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .maincontainer {
@@ -49,9 +48,11 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-  text-decoration-color: #C5750C;
-  text-decoration-thickness: 0.1rem;
+  color: #0cb60c;
+}
+
+a {
+  transition: color 0.2s ease-in-out;
 }
 
 main {
@@ -119,6 +120,7 @@ figcaption {
 }
 
 main section li {
+  padding: 0.2rem;
   list-style: none;
   font-weight: bold;
 }
@@ -139,4 +141,3 @@ footer p {
   color: #e7e61b;
   padding-top: 0;
 }
-
