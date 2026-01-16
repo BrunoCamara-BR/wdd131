@@ -2,9 +2,9 @@
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .maincontainer {
@@ -50,7 +50,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(197, 117, 12);
+  text-decoration-color: #C5750C;
   text-decoration-thickness: 0.1rem;
 }
 
@@ -140,9 +140,3 @@ footer p {
   padding-top: 0;
 }
 
-
-.highlight {
-	color: navy;
-	font-weight: 700;
-	font-family: hebrew;
-}
