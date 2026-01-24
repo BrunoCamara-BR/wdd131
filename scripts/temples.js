@@ -25,7 +25,7 @@ const hours = String(today.getHours()).padStart(2, "0");
 const minutes = String(today.getMinutes()).padStart(2, "0");
 const seconds = String(today.getSeconds()).padStart(2, "0");
 
-const fullDateTime = `Last modification: ${day}/${month}/${currentYear} ${hours}:${minutes}:${seconds}`;
+const fullDateTime = `Last modification: ${month}/${day}/${currentYear} ${hours}:${minutes}:${seconds}`;
 
 document.getElementById("lastmodified").textContent = fullDateTime;
 
