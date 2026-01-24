@@ -16,10 +16,16 @@
     font-size: 1rem;
   }
 
+  header nav ul li:hover {
+    color: aqua;
+  }
+
   header nav ul {
     gap: 1rem;
     margin-right: 1rem;
   }
+
+
 }
 
 @media screen and (min-width: 920px) {

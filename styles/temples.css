@@ -82,6 +82,10 @@ nav {
   display: block;
 }
 
+header nav ul li:hover {
+  color: aqua;
+}
+
 .main-title.show {
   display: none;
 }
@@ -120,6 +124,8 @@ figure {
 figure img {
   width: 100%;
   height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 30px #111;
 }
 
 figcaption {
