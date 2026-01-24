@@ -1,6 +1,6 @@
 @media screen and (min-width: 540px) {
   main div {
-    grid-template-columns: 1fr 1fr;
+      grid-template: repeat(5, 1fr) / repeat(2, 1fr);
   }
 
   #hambutton {
@@ -24,7 +24,7 @@
 
 @media screen and (min-width: 920px) {
   main div {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   }
 
   header p {
