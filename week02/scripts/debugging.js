@@ -11,5 +11,5 @@ areaOutput.textContent = area;
 
 radius = 20;
 area = PI * radius * radius;
-radiusOutput.innerHTML = radius;
-areaOutput.innerHTML = area;
+radiusOutput.textContent = radius;
+areaOutput.textContent = area;

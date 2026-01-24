@@ -1,0 +1,42 @@
+@media screen and (min-width: 540px) {
+  main div {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #hambutton {
+    display: none;
+  }
+
+  header p {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li {
+    display: block;
+    font-size: 1rem;
+  }
+
+  header nav ul {
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  main div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  header p {
+    font-size: 2rem;
+  }
+
+  header nav ul li {
+    font-size: 1.5rem;
+  }
+
+  header nav ul {
+    gap: 2rem;
+    margin-right: 3rem;
+  }
+}
