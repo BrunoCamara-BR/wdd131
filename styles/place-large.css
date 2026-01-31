@@ -66,14 +66,7 @@
   }
 
   .large-weather h2::after {
-    content: "";
-    position: absolute;
-    right: 0.5rem;
-    bottom: 6.2rem;
-    width: 25px;
-    height: 25px;
-    background-image: url("../images/sunset_icon.svg");
-    background-repeat: no-repeat;
+    content: "🌅";
   }
 
   figcaption {
@@ -100,13 +93,6 @@
   }
   footer {
     font-size: 22px;
-  }
-
-  .large-weather h2::after {
-    width: 50px;
-    height: 50px;
-    right: 0.5rem;
-    bottom: 8.6rem;
   }
 
   main .large-weather dl {
