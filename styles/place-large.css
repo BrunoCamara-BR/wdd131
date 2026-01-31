@@ -1,0 +1,93 @@
+@media screen and (min-width: 500px) {
+  main {
+    position: relative;
+    margin: 0;
+  }
+  main .large-data dl {
+    grid-template-columns: 1fr 1.3fr;
+    column-gap: 0.5rem;
+  }
+  .large-data {
+    position: absolute;
+    background-color: rgba(var(--bg-color-1), var(--bg-alpha));
+    top: 1rem;
+    left: 1rem;
+    border-radius: var(--border-r);
+  }
+
+  .large-data {
+    padding: 0;
+  }
+
+  .large-data dl {
+  }
+  main h2 {
+    padding: 0.5rem 0;
+    border-top-left-radius: var(--border-r);
+    border-top-right-radius: var(--border-r);
+    background-color: rgba(var(--bg-color-1), 0.6);
+    font-size: 18px;
+  }
+
+  .large-data dl {
+    font-size: 12px;
+    padding: 0.5rem 0 0.5rem;
+    padding-right: 0.6rem;
+  }
+
+  .large-weather {
+    position: absolute;
+    background-color: rgba(var(--bg-color-1), var(--bg-alpha));
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: var(--border-r);
+  }
+
+  main figure {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    align-items: center;
+    justify-items: left;
+    padding: 0 1rem 0.5rem;
+    background-color: rgba(var(--bg-color-1), 0.6);
+  }
+
+  main figure img {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  main .large-weather dl {
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 0.5rem;
+    padding: 0.5rem 0 0.5rem;
+  }
+
+  main picture img {
+    display: block;
+  }
+  footer {
+    border-top: 1px solid #fff;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main h2 {
+    font-size: 26px;
+  }
+
+  .large-data dl,
+  .large-weather dl {
+    font-size: 18px;
+  }
+
+  .large-weather figure {
+    font-size: 22px;
+  }
+  header h1 {
+    font-size: 36px;
+  }
+  footer {
+    font-size: 22px;
+  }
+}

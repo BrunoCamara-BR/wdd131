@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Rio de Janeiro Page</title>
+    <meta name="author" content="Bruno Câmara dos Santos" />
+    <meta
+      name="description"
+      content="Weather page with data about the Rio de Janeiro - Brazil"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="stylesheet" href="styles/place-large.css" />
+    <!-- js -->
+    <script src="scripts/place.js" defer></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Rio de Janeiro</h1>
+    </header>
+    <main>
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 800px)" />
+        <source srcset="images/hero-medium.webp" media="(min-width: 500px)" />
+
+        <img
+          src="images/hero.webp"
+          alt="Panoramic photo of Rio de Janeiro"
+          width="393"
+          height="524"
+        />
+      </picture>
+      <section class="data">
+        <div class="large-data">
+          <h2>Data</h2>
+          <dl>
+            <dt>Area:</dt>
+            <dd>1,200.33 km²</dd>
+
+            <dt>Population:</dt>
+            <dd>6.7 million</dd>
+
+            <dt>Languages:</dt>
+            <dd>Portuguese</dd>
+
+            <dt>Time zone:</dt>
+            <dd>BRT, UTC−3</dd>
+
+            <dt>Currency:</dt>
+            <dd>Brazilian Real (BRL)</dd>
+
+            <dt>Calling Code:</dt>
+            <dd>+55</dd>
+          </dl>
+        </div>
+      </section>
+      <section class="weather">
+        <div class="large-weather">
+          <h2>Weather</h2>
+          <figure>
+            <img
+              src="images/sunset_icon.svg"
+              alt="sunset icon"
+              width="75"
+              height="63"
+            />
+            <figcaption>Sunset</figcaption>
+          </figure>
+          <div>
+            <dl>
+              <dt>Temperature:</dt>
+              <dd>25 ºC</dd>
+
+              <dt>Conditions:</dt>
+              <dd>Clear</dd>
+
+              <dt>Winds:</dt>
+              <dd>11 mph</dd>
+
+              <dt>Wind chill:</dt>
+              <dd>23.4 ºC</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy;<span id="currentyear"></span> ⚜️ Bruno Câmara dos Santos ⚜️ Rio
+        de Janeiro ⚜️ Brazil
+      </p>
+      <p id="lastmodified"></p>
+    </footer>
+  </body>
+</html>
