@@ -44,22 +44,17 @@
   }
 
   main figure {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    align-items: center;
-    justify-items: left;
-    padding: 0 1rem 0.5rem;
     background-color: rgba(var(--bg-color-1), 0.6);
   }
 
   main figure img {
-    grid-area: 1 / 2 / 2 / 3;
+    display: none;
   }
 
   main .large-weather dl {
     grid-template-columns: 1.5fr 1fr;
     column-gap: 0.5rem;
-    padding: 0.5rem 0 0.5rem;
+    padding: 0.5rem;
   }
 
   main picture img {
@@ -68,6 +63,22 @@
   footer {
     border-top: 1px solid #fff;
     font-size: 18px;
+  }
+
+  .large-weather h2::after {
+    content: "";
+    position: absolute;
+    right: 0.5rem;
+    bottom: 6.2rem;
+    width: 25px;
+    height: 25px;
+    background-image: url("../images/sunset_icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  figcaption {
+    margin-bottom: 0;
+    padding-bottom: 0.3rem;
   }
 }
 
@@ -89,5 +100,16 @@
   }
   footer {
     font-size: 22px;
+  }
+
+  .large-weather h2::after {
+    width: 50px;
+    height: 50px;
+    right: 0.5rem;
+    bottom: 8.6rem;
+  }
+
+  main .large-weather dl {
+    padding: 1rem;
   }
 }
