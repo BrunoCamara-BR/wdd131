@@ -1,0 +1,46 @@
+@media screen and (min-width: 540px) {
+  main div {
+    grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+  }
+
+  #hambutton {
+    display: none;
+  }
+
+  header p {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li {
+    display: block;
+    font-size: 1rem;
+  }
+
+  header nav ul li:hover {
+    color: aqua;
+  }
+
+  header nav ul {
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  main div {
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  }
+
+  header p {
+    font-size: 2rem;
+  }
+
+  header nav ul li {
+    font-size: 1.5rem;
+  }
+
+  header nav ul {
+    gap: 2rem;
+    margin-right: 3rem;
+  }
+}

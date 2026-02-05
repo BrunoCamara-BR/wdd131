@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header,
+footer {
+  background-color: #2e2e31;
+  color: #fff;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+#hambutton {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: aqua;
+}
+
+#hambutton::before {
+  display: block;
+  text-align: right;
+  content: "≡";
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header nav ul li {
+  display: none;
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+nav {
+  display: flex;
+  order: 1;
+  align-self: center;
+}
+
+#hambutton.show::before {
+  content: "X";
+}
+
+.menu.show {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.show li {
+  display: block;
+}
+
+header nav ul li:hover {
+  color: aqua;
+}
+
+.main-title.show {
+  display: none;
+}
+
+.main-title {
+  display: block;
+}
+
+header.show {
+  justify-content: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+main div {
+  display: grid;
+  grid-template: repeat(9, 1fr) / 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+  text-align: center;
+  padding: 1rem 1.2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+figcaption {
+  color: #252529;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  min-height: 7.5rem;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 289 / 181;
+  border-radius: 5px;
+  box-shadow: 0 0 30px #111;
+  display: block;
+  object-fit: cover;
+}
+
+footer {
+  padding: 2rem;
+  justify-items: center;
+}
+
+#lastmodified {
+  color: aqua;
+}
