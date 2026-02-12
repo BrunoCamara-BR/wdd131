@@ -1,0 +1,60 @@
+@media screen and (min-width: 700px) {
+  header div {
+    flex-direction: row;
+  }
+
+  dt,
+  dd,
+  p {
+    font-size: calc(14px * 1.25);
+  }
+
+  figcaption {
+    font-size: calc(16px * 1.25);
+  }
+
+  header h1 {
+    font-size: calc(32px * 1.25);
+  }
+
+  h2 {
+    font-size: calc(24px * 1.25);
+  }
+
+  #grid-wireframe {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 1rem;
+  }
+
+  #grid-wireframe figure:first-child {
+    grid-column: 1/2;
+  }
+  #grid-wireframe figure:last-child {
+    grid-column: 2/2;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  dt,
+  dd,
+  p {
+    font-size: calc(14px * 1.5);
+  }
+
+  figcaption {
+    font-size: calc(16px * 1.5);
+  }
+
+  header h1 {
+    font-size: calc(32px * 1.5);
+  }
+
+  h2 {
+    font-size: calc(24px * 1.5);
+  }
+
+  header img {
+    width: calc(100px * 1.5);
+  }
+}
