@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  background: #f1f1e9;
+  color: #302f2f;
+}
+
+header {
+  background: #1f6feb;
+  color: #ffffff;
+}
+
+.page-header {
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.review-form,
+.confirmation {
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fafafa;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+label,
+legend {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+.rating label,
+.checks label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.35rem 0;
+  font-weight: 400;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 0;
+  border-radius: 8px;
+  background: #1f6feb;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  filter: brightness(0.95);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1f6feb;
+  color: #fff;
+}
+
+.confirmation {
+  margin: 0 auto;
+  display: block;
+  justify-items: center;
+}
+
+/* Desktop improvements */
+@media (min-width: 700px) {
+  .review-form,
+  .confirmation {
+    padding: 1.5rem;
+  }
+}

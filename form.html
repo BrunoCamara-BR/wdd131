@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Review Form</title>
+    <meta name="author" content="Bruno Câmara dos Santos" />
+    <meta name="description" content="Product review form page." />
+    <link rel="stylesheet" href="styles/form.css" />
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Product Review</h1>
+      <p>Please complete the form below.</p>
+    </header>
+
+    <main>
+      <form class="review-form" method="get" action="review.html">
+        <!-- Product Name -->
+        <div class="field">
+          <label for="productName">Product Name *</label>
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            <!-- Options will be added dynamically by JS -->
+          </select>
+        </div>
+
+        <!-- Overall Rating -->
+        <fieldset class="field">
+          <legend>Overall Rating *</legend>
+          <div class="rating">
+            <label for="rate1">
+              <input type="radio" id="rate1" name="rating" value="1" required />
+              1 ☆
+            </label>
+
+            <label for="rate2">
+              <input type="radio" id="rate2" name="rating" value="2" required />
+              2 ☆☆
+            </label>
+
+            <label for="rate3">
+              <input type="radio" id="rate3" name="rating" value="3" required />
+              3 ☆☆☆
+            </label>
+
+            <label for="rate4">
+              <input type="radio" id="rate4" name="rating" value="4" required />
+              4 ☆☆☆☆
+            </label>
+
+            <label for="rate5">
+              <input type="radio" id="rate5" name="rating" value="5" required />
+              5 ☆☆☆☆☆
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Date of Installation -->
+        <div class="field">
+          <label for="installDate">Date of Installation *</label>
+          <input type="date" id="installDate" name="installDate" required />
+        </div>
+
+        <!-- Useful Features -->
+        <fieldset class="field">
+          <legend>Useful Features (check all that apply)</legend>
+          <div class="checks">
+            <label for="feature1">
+              <input
+                type="checkbox"
+                id="feature1"
+                name="features"
+                value="easy-to-use"
+              />
+              Easy to use
+            </label>
+
+            <label for="feature2">
+              <input
+                type="checkbox"
+                id="feature2"
+                name="features"
+                value="durable"
+              />
+              Durable
+            </label>
+
+            <label for="feature3">
+              <input
+                type="checkbox"
+                id="feature3"
+                name="features"
+                value="good-value"
+              />
+              Good value
+            </label>
+
+            <label for="feature4">
+              <input
+                type="checkbox"
+                id="feature4"
+                name="features"
+                value="fast"
+              />
+              Fast performance
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Written Review -->
+        <div class="field">
+          <label for="writtenReview">Written Review (optional)</label>
+          <textarea
+            id="writtenReview"
+            name="writtenReview"
+            rows="5"
+            placeholder="Write your review here..."
+          ></textarea>
+        </div>
+
+        <!-- User Name -->
+        <div class="field">
+          <label for="userName">Your Name (optional)</label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            autocomplete="name"
+          />
+        </div>
+
+        <!-- Submit -->
+        <div class="actions">
+          <input type="submit" value="Send my review" />
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy;<span id="currentyear"></span> | Bruno Câmara | Brazil</p>
+      <p id="lastmodified"></p>
+    </footer>
+  </body>
+</html>
