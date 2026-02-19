@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UAI Store</title>
+    <title>UAI Store - Cart</title>
     <meta name="author" content="Bruno Câmara dos Santos" />
-    <meta
-      name="description"
-      content="Uai storage main site with all products to buy and main menu"
-    />
+    <meta name="description" content="Uai Store cart page" />
     <link rel="stylesheet" href="styles/siteplan.css" />
     <link rel="stylesheet" href="styles/siteplan-large.css" />
-    <script src="scripts/siteplan.js" defer></script>
+    <script src="scripts/cart.js" defer></script>
     <script src="scripts/siteplan-footer.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,22 +33,12 @@
     <header>
       <div>
         <fieldset>
-          <img src="images/logo.webp" alt="main logo Uai Store" />
+          <a href="siteplan.html" aria-label="Back to store">
+            <img src="images/logo.webp" alt="main logo Uai Store" />
+          </a>
           <figcaption>Uai store</figcaption>
         </fieldset>
 
-        <div id="seaching-bar">
-          <form id="searchForm">
-            <input
-              type="text"
-              id="bar"
-              placeholder="🔍︎ Type a color (e.g., red, green)"
-            />
-            <button type="submit" id="searchBtn" aria-label="Search">
-              🔍
-            </button>
-          </form>
-        </div>
         <a href="#" id="hambutton">☰</a>
         <div id="menu">
           <a href="#" id="hambutton-close">X</a>
@@ -59,30 +46,44 @@
             <img src="images/cart.ico" alt="my cart" />
             <span class="cart-badge" id="cartCount" aria-label="Cart items">0</span>
           </a>
+          <a href="siteplan.html">Back</a>
           <a href="support.html">Support</a>
         </div>
       </div>
     </header>
-    <main>
-      <div id="main-container">
-        <div id="flex-buttons">
-          <button type="submit" method="get" id="price-button">price ↓</button>
-          <button type="submit" method="get" id="a-z-button">a-z ↓</button>
-          <button type="submit" method="get" id="discount-button">
-            discount ↓
-          </button>
-        </div>
 
-        <ul id="products-card"></ul>
+    <main>
+      <div id="cart-container">
+        <h1 id="cart-title">My Cart</h1>
+
+        <section id="cart-items" aria-label="Cart items list"></section>
+        <p id="cart-empty" style="display: none;">Your cart is empty.</p>
+
+        <section id="cart-summary" aria-label="Checkout">
+          <p id="cart-total">Total: US$ 0.00</p>
+
+          <form id="checkout-form" autocomplete="off">
+            <label for="cardName">Cardholder name</label>
+            <input id="cardName" name="cardName" type="text" placeholder="John Doe" required />
+
+            <label for="cardNumber">Card number</label>
+            <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" placeholder="1111 2222 3333 4444" required />
+
+            <label for="cardExp">Expiration (MM/YY)</label>
+            <input id="cardExp" name="cardExp" type="text" placeholder="12/34" required />
+
+            <label for="cardCvv">CVV</label>
+            <input id="cardCvv" name="cardCvv" type="text" inputmode="numeric" placeholder="123" required />
+
+            <button id="buyBtn" type="submit">Buy my hammocks</button>
+          </form>
+        </section>
       </div>
     </main>
+
     <footer>
       <p>&copy;<span id="currentyear"></span> | Bruno Câmara | Brazil</p>
       <p id="lastmodified"></p>
     </footer>
   </body>
 </html>
-
-
-
-

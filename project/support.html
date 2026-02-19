@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UAI Store</title>
+    <title>UAI Store - Support</title>
     <meta name="author" content="Bruno Câmara dos Santos" />
-    <meta
-      name="description"
-      content="Uai storage main site with all products to buy and main menu"
-    />
+    <meta name="description" content="Uai Store support page" />
     <link rel="stylesheet" href="styles/siteplan.css" />
     <link rel="stylesheet" href="styles/siteplan-large.css" />
-    <script src="scripts/siteplan.js" defer></script>
+    <script src="scripts/support.js" defer></script>
     <script src="scripts/siteplan-footer.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,22 +33,12 @@
     <header>
       <div>
         <fieldset>
-          <img src="images/logo.webp" alt="main logo Uai Store" />
+          <a href="siteplan.html" aria-label="Back to store">
+            <img src="images/logo.webp" alt="main logo Uai Store" />
+          </a>
           <figcaption>Uai store</figcaption>
         </fieldset>
 
-        <div id="seaching-bar">
-          <form id="searchForm">
-            <input
-              type="text"
-              id="bar"
-              placeholder="🔍︎ Type a color (e.g., red, green)"
-            />
-            <button type="submit" id="searchBtn" aria-label="Search">
-              🔍
-            </button>
-          </form>
-        </div>
         <a href="#" id="hambutton">☰</a>
         <div id="menu">
           <a href="#" id="hambutton-close">X</a>
@@ -59,30 +46,43 @@
             <img src="images/cart.ico" alt="my cart" />
             <span class="cart-badge" id="cartCount" aria-label="Cart items">0</span>
           </a>
-          <a href="support.html">Support</a>
+          <a href="siteplan.html">Back</a>
         </div>
       </div>
     </header>
-    <main>
-      <div id="main-container">
-        <div id="flex-buttons">
-          <button type="submit" method="get" id="price-button">price ↓</button>
-          <button type="submit" method="get" id="a-z-button">a-z ↓</button>
-          <button type="submit" method="get" id="discount-button">
-            discount ↓
-          </button>
-        </div>
 
-        <ul id="products-card"></ul>
+    <main>
+      <div id="support-container">
+        <h1 id="support-title">Support</h1>
+
+        <section id="support-card" aria-label="Support form">
+          <form id="support-form" autocomplete="off">
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="John Doe" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="john@email.com" required />
+
+            <label for="reason">Reason</label>
+            <textarea id="reason" name="reason" rows="5" placeholder="Tell us how we can help..." required></textarea>
+
+            <button id="sendBtn" type="submit">Send</button>
+          </form>
+
+          <p id="support-success" class="success-msg" style="display:none;">
+            Message sent successfully!
+          </p>
+
+          <button id="backToStore" type="button" onclick="window.location.href='siteplan.html'">
+            Return to store
+          </button>
+        </section>
       </div>
     </main>
+
     <footer>
       <p>&copy;<span id="currentyear"></span> | Bruno Câmara | Brazil</p>
       <p id="lastmodified"></p>
     </footer>
   </body>
 </html>
-
-
-
-

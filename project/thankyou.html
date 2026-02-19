@@ -3,16 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UAI Store</title>
+    <title>UAI Store - Thank You</title>
     <meta name="author" content="Bruno Câmara dos Santos" />
-    <meta
-      name="description"
-      content="Uai storage main site with all products to buy and main menu"
-    />
+    <meta name="description" content="Thank you for your purchase" />
     <link rel="stylesheet" href="styles/siteplan.css" />
     <link rel="stylesheet" href="styles/siteplan-large.css" />
-    <script src="scripts/siteplan.js" defer></script>
-    <script src="scripts/siteplan-footer.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,58 +26,65 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      #thankyou-container {
+        width: 94%;
+        margin: 0 auto;
+        padding: 2rem 0;
+      }
+      #thankyou-card {
+        background: #ededed;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      #thankyou-card h1 {
+        font-family: "Archivo Black", sans-serif;
+        color: #1460aa;
+        margin-bottom: 0.75rem;
+      }
+      #thankyou-card p {
+        font-family: "Roboto", sans-serif;
+        color: #202324;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      #backBtn {
+        background-color: #1460aa;
+        color: #f8dc4b;
+        border: none;
+        border-radius: 6px;
+        padding: 0.7rem 0.9rem;
+        font-weight: 800;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <header>
       <div>
         <fieldset>
-          <img src="images/logo.webp" alt="main logo Uai Store" />
+          <a href="siteplan.html" aria-label="Back to store">
+            <img src="images/logo.webp" alt="main logo Uai Store" />
+          </a>
           <figcaption>Uai store</figcaption>
         </fieldset>
 
-        <div id="seaching-bar">
-          <form id="searchForm">
-            <input
-              type="text"
-              id="bar"
-              placeholder="🔍︎ Type a color (e.g., red, green)"
-            />
-            <button type="submit" id="searchBtn" aria-label="Search">
-              🔍
-            </button>
-          </form>
-        </div>
-        <a href="#" id="hambutton">☰</a>
-        <div id="menu">
-          <a href="#" id="hambutton-close">X</a>
-          <a href="cart.html" aria-label="my cart" class="cart-link">
-            <img src="images/cart.ico" alt="my cart" />
-            <span class="cart-badge" id="cartCount" aria-label="Cart items">0</span>
-          </a>
-          <a href="support.html">Support</a>
-        </div>
+        <a href="#" id="hambutton" style="visibility:hidden;">☰</a>
+        <div id="menu" style="display:none;"></div>
       </div>
     </header>
+
     <main>
-      <div id="main-container">
-        <div id="flex-buttons">
-          <button type="submit" method="get" id="price-button">price ↓</button>
-          <button type="submit" method="get" id="a-z-button">a-z ↓</button>
-          <button type="submit" method="get" id="discount-button">
-            discount ↓
+      <div id="thankyou-container">
+        <div id="thankyou-card">
+          <h1>Thank you for your purchase!</h1>
+          <p>Your hammocks are on the way. See you soon.</p>
+          <button id="backBtn" type="button" onclick="window.location.href='siteplan.html'">
+            Return to store
           </button>
         </div>
-
-        <ul id="products-card"></ul>
       </div>
     </main>
-    <footer>
-      <p>&copy;<span id="currentyear"></span> | Bruno Câmara | Brazil</p>
-      <p id="lastmodified"></p>
-    </footer>
   </body>
 </html>
-
-
-
-
