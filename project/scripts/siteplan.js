@@ -1,13 +1,13 @@
-const priceButton = document.querySelector("#price-button")
-const aZButton = document.querySelector("#a-z-button")
-const discountButton = document.querySelector("#discount-button")
-const hambutton = document.querySelector("#hambutton")
-const hambuttonClose = document.querySelector("#hambutton-close")
-const menu = document.querySelector("#menu")
-const searchForm = document.querySelector("#searchForm")
-const searchInput = document.querySelector("#bar")
-const searchBtn = document.querySelector("#searchBtn")
-const cartCountEl = document.querySelector("#cartCount")
+const priceButton = document.querySelector("#price-button");
+const aZButton = document.querySelector("#a-z-button");
+const discountButton = document.querySelector("#discount-button");
+const hambutton = document.querySelector("#hambutton");
+const hambuttonClose = document.querySelector("#hambutton-close");
+const menu = document.querySelector("#menu");
+const searchForm = document.querySelector("#searchForm");
+const searchInput = document.querySelector("#bar");
+const searchBtn = document.querySelector("#searchBtn");
+const cartCountEl = document.querySelector("#cartCount");
 
 // ---- LocalStorage cart helpers ----
 const CART_KEY = "uai_cart";
@@ -38,32 +38,98 @@ function updateCartBadge() {
 }
 
 const hammocksObj = [
-  { codigo: 2718, type: "balcony", color: "beige", value: 45, discountValue: 10 },
+  {
+    codigo: 2718,
+    type: "balcony",
+    color: "beige",
+    value: 45,
+    discountValue: 10,
+  },
   { codigo: 3566, type: "balcony", color: "red", value: 45, discountValue: 0 },
-  { codigo: 3668, type: "traditional", color: "blue", value: 25, discountValue: 5 },
-  { codigo: 3843, type: "traditional", color: "mixed", value: 28, discountValue: 0 },
-  { codigo: 4220, type: "balcony", color: "pink", value: 45, discountValue: 12 },
-  { codigo: 4349, type: "traditional", color: "green", value: 25, discountValue: 0 },
-  { codigo: 6885, type: "balcony", color: "green-black", value: 45, discountValue: 5 },
-  { codigo: 7004, type: "traditional", color: "orange", value: 25, discountValue: 0 },
-  { codigo: 7182, type: "balcony", color: "mixed", value: 49, discountValue: 10 },
+  {
+    codigo: 3668,
+    type: "traditional",
+    color: "blue",
+    value: 25,
+    discountValue: 5,
+  },
+  {
+    codigo: 3843,
+    type: "traditional",
+    color: "mixed",
+    value: 28,
+    discountValue: 0,
+  },
+  {
+    codigo: 4220,
+    type: "balcony",
+    color: "pink",
+    value: 45,
+    discountValue: 12,
+  },
+  {
+    codigo: 4349,
+    type: "traditional",
+    color: "green",
+    value: 25,
+    discountValue: 0,
+  },
+  {
+    codigo: 6885,
+    type: "balcony",
+    color: "green-black",
+    value: 45,
+    discountValue: 5,
+  },
+  {
+    codigo: 7004,
+    type: "traditional",
+    color: "orange",
+    value: 25,
+    discountValue: 0,
+  },
+  {
+    codigo: 7182,
+    type: "balcony",
+    color: "mixed",
+    value: 49,
+    discountValue: 10,
+  },
   { codigo: 7214, type: "nylon", color: "green", value: 22, discountValue: 0 },
   { codigo: 8141, type: "balcony", color: "red", value: 45, discountValue: 12 },
-  { codigo: 8526, type: "presidential", color: "blue", value: 69.5, discountValue: 0 },
-  { codigo: 9562, type: "balcony", color: "mixed", value: 49, discountValue: 5 },
-  { codigo: 9783, type: "kids", color: "green", value: 19.5, discountValue: 10 }
+  {
+    codigo: 8526,
+    type: "presidential",
+    color: "blue",
+    value: 69.5,
+    discountValue: 0,
+  },
+  {
+    codigo: 9562,
+    type: "balcony",
+    color: "mixed",
+    value: 49,
+    discountValue: 5,
+  },
+  {
+    codigo: 9783,
+    type: "kids",
+    color: "green",
+    value: 19.5,
+    discountValue: 10,
+  },
 ];
 
-
 function showProducts(hammocksObj) {
+  document.querySelector("#products-card").innerHTML = hammocksObj.reduce(
+    (allCards, item) => {
+      const basePrice = Number(item.value);
+      const finalPrice =
+        item.discountValue > 0
+          ? basePrice * (1 - Number(item.discountValue) / 100)
+          : basePrice;
 
-    document.querySelector("#products-card").innerHTML = hammocksObj.reduce((allCards, item) => {
-    const basePrice = Number(item.value);
-    const finalPrice = item.discountValue > 0
-      ? basePrice * (1 - (Number(item.discountValue) / 100))
-      : basePrice;
-
-    return allCards += `
+      return (allCards += `
     <li class="card">
             <div class="products">
               <img src="images/products/${item.codigo}.webp" alt="hammock ${item.type} ${item.color}" loading="lazy" />
@@ -81,10 +147,10 @@ function showProducts(hammocksObj) {
               </button>
             </div>
           </li>
-        `;
-  }
-  ,"");
-
+        `);
+    },
+    "",
+  );
 }
 
 showProducts(hammocksObj);
@@ -94,9 +160,9 @@ updateCartBadge();
 let currentList = hammocksObj.slice();
 
 // ---- Sorting / filtering controls ----
-let priceAsc = false;     // starts at "price ↓"
-let azAsc = false;        // starts at "a-z ↓"
-let discountAsc = false;  // starts at "discount ↓"
+let priceAsc = false; // starts at "price ↓"
+let azAsc = false; // starts at "a-z ↓"
+let discountAsc = false; // starts at "discount ↓"
 
 function productName(item) {
   return `hammock ${item.type} ${item.color}`.toLowerCase();
@@ -146,7 +212,9 @@ function applyAZSort() {
 
 function applyDiscountSort() {
   const sorted = currentList.slice().sort((a, b) => {
-    return discountAsc ? a.discountValue - b.discountValue : b.discountValue - a.discountValue;
+    return discountAsc
+      ? a.discountValue - b.discountValue
+      : b.discountValue - a.discountValue;
   });
   renderSorted(sorted);
 }
@@ -216,7 +284,9 @@ searchForm.addEventListener("submit", (e) => {
   } catch (err) {
     // fallback simple contains if regex is invalid
     const qLower = q.toLowerCase();
-    currentList = hammocksObj.filter((item) => String(item.color).toLowerCase().includes(qLower));
+    currentList = hammocksObj.filter((item) =>
+      String(item.color).toLowerCase().includes(qLower),
+    );
     applyActiveSortOrRender();
     return;
   }
@@ -254,7 +324,3 @@ hambuttonClose.addEventListener("click", () => {
   hambutton.classList.toggle("active");
   menu.classList.toggle("show");
 });
-
-
-
-

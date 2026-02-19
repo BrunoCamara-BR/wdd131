@@ -11,20 +11,86 @@ const hambuttonClose = document.querySelector("#hambutton-close");
 const menu = document.querySelector("#menu");
 
 const PRODUCTS = [
-  { codigo: 2718, type: "balcony", color: "beige", value: 45, discountValue: 10 },
+  {
+    codigo: 2718,
+    type: "balcony",
+    color: "beige",
+    value: 45,
+    discountValue: 10,
+  },
   { codigo: 3566, type: "balcony", color: "red", value: 45, discountValue: 0 },
-  { codigo: 3668, type: "traditional", color: "blue", value: 25, discountValue: 5 },
-  { codigo: 3843, type: "traditional", color: "mixed", value: 28, discountValue: 0 },
-  { codigo: 4220, type: "balcony", color: "pink", value: 45, discountValue: 12 },
-  { codigo: 4349, type: "traditional", color: "green", value: 25, discountValue: 0 },
-  { codigo: 6885, type: "balcony", color: "green-black", value: 45, discountValue: 5 },
-  { codigo: 7004, type: "traditional", color: "orange", value: 25, discountValue: 0 },
-  { codigo: 7182, type: "balcony", color: "mixed", value: 49, discountValue: 10 },
+  {
+    codigo: 3668,
+    type: "traditional",
+    color: "blue",
+    value: 25,
+    discountValue: 5,
+  },
+  {
+    codigo: 3843,
+    type: "traditional",
+    color: "mixed",
+    value: 28,
+    discountValue: 0,
+  },
+  {
+    codigo: 4220,
+    type: "balcony",
+    color: "pink",
+    value: 45,
+    discountValue: 12,
+  },
+  {
+    codigo: 4349,
+    type: "traditional",
+    color: "green",
+    value: 25,
+    discountValue: 0,
+  },
+  {
+    codigo: 6885,
+    type: "balcony",
+    color: "green-black",
+    value: 45,
+    discountValue: 5,
+  },
+  {
+    codigo: 7004,
+    type: "traditional",
+    color: "orange",
+    value: 25,
+    discountValue: 0,
+  },
+  {
+    codigo: 7182,
+    type: "balcony",
+    color: "mixed",
+    value: 49,
+    discountValue: 10,
+  },
   { codigo: 7214, type: "nylon", color: "green", value: 22, discountValue: 0 },
   { codigo: 8141, type: "balcony", color: "red", value: 45, discountValue: 12 },
-  { codigo: 8526, type: "presidential", color: "blue", value: 69.5, discountValue: 0 },
-  { codigo: 9562, type: "balcony", color: "mixed", value: 49, discountValue: 5 },
-  { codigo: 9783, type: "kids", color: "green", value: 19.5, discountValue: 10 }
+  {
+    codigo: 8526,
+    type: "presidential",
+    color: "blue",
+    value: 69.5,
+    discountValue: 0,
+  },
+  {
+    codigo: 9562,
+    type: "balcony",
+    color: "mixed",
+    value: 49,
+    discountValue: 5,
+  },
+  {
+    codigo: 9783,
+    type: "kids",
+    color: "green",
+    value: 19.5,
+    discountValue: 10,
+  },
 ];
 
 function findProduct(code) {

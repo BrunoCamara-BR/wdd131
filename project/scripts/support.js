@@ -32,12 +32,10 @@ function updateCartBadge() {
 form?.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Intermediate-level: just show success, do not send anywhere
   successMsg.style.display = "block";
   form.reset();
 });
 
-// Hamburger menu
 hambutton?.addEventListener("click", () => {
   hambutton.classList.toggle("active");
   menu?.classList.toggle("show");

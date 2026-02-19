@@ -551,7 +551,6 @@ header .show a {
   text-align: center;
 }
 
-/* Cart badge (works in menu mobile and desktop) */
 .cart-link {
   position: relative;
   display: inline-block;
@@ -683,6 +682,3 @@ header .show a {
   padding: 0.35rem 0.5rem;
   border-radius: 5px;
 }
-
-
-

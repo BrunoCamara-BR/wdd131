@@ -44,7 +44,9 @@
           <a href="#" id="hambutton-close">X</a>
           <a href="cart.html" aria-label="my cart" class="cart-link">
             <img src="images/cart.ico" alt="my cart" />
-            <span class="cart-badge" id="cartCount" aria-label="Cart items">0</span>
+            <span class="cart-badge" id="cartCount" aria-label="Cart items"
+              >0</span
+            >
           </a>
           <a href="siteplan.html">Back</a>
         </div>
@@ -58,22 +60,44 @@
         <section id="support-card" aria-label="Support form">
           <form id="support-form" autocomplete="off">
             <label for="fullName">Full name</label>
-            <input id="fullName" name="fullName" type="text" placeholder="John Doe" required />
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              placeholder="John Doe"
+              required
+            />
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="john@email.com" required />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="john@email.com"
+              required
+            />
 
             <label for="reason">Reason</label>
-            <textarea id="reason" name="reason" rows="5" placeholder="Tell us how we can help..." required></textarea>
+            <textarea
+              id="reason"
+              name="reason"
+              rows="5"
+              placeholder="Tell us how we can help..."
+              required
+            ></textarea>
 
             <button id="sendBtn" type="submit">Send</button>
           </form>
 
-          <p id="support-success" class="success-msg" style="display:none;">
+          <p id="support-success" class="success-msg" style="display: none">
             Message sent successfully!
           </p>
 
-          <button id="backToStore" type="button" onclick="window.location.href='siteplan.html'">
+          <button
+            id="backToStore"
+            type="button"
+            onclick="window.location.href = 'siteplan.html'"
+          >
             Return to store
           </button>
         </section>
